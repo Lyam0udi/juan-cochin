@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Use HomeController@index for all routes except '/'
+Route::get('/{any}', 'HomeController@index')->where('any', '^(?!$).*$');
+
+// Use a separate route for the root URL '/'
 Route::get('/', function () {
     return view('welcome');
 });
