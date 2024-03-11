@@ -1,7 +1,12 @@
-<!-- resources/js/Home.vue -->
+<!-- resources/js/components/Home.vue -->
 <template>
   <div>
-    <h1>This is the home component!</h1>
+    <section>
+      <h2>Welcome to Juan Cochin's Portfolio</h2>
+      <p>Your introductory content goes here.</p>
+    </section>
+
+    <router-view></router-view>
   </div>
 </template>
 
