@@ -1,13 +1,8 @@
-// resources/js/app.js
+// resources/js/main.js
 
-require('./bootstrap');
+import { createApp } from 'vue';
+import Home from './components/Home.vue';
 
-import Vue from 'vue';
-import router from './routes'; // Import your VueRouter instance
-import App from './components/App.vue'; // Main component that will wrap your routes
-
-const app = new Vue({
-  el: '#app',
-  components: { App },
-  router, // Use the VueRouter instance
-});
+const app = createApp();
+app.component('home', Home);
+app.mount('#app');

@@ -1,19 +1,10 @@
-<!-- resources/js/components/Home.vue -->
-
+<!-- resources/js/Home.vue -->
 <template>
-    <div>
-      <!-- Your home page content goes here -->
-      <h1>Welcome to the Art Gallery!</h1>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    // Your component logic goes here
-  };
-  </script>
-  
-  <style scoped>
-  /* Your component-specific styles go here */
-  </style>
-  
+  <div>
+    <h1>This is the home component!</h1>
+  </div>
+</template>
+
+<script setup>
+// No need for additional setup for this example
+</script>

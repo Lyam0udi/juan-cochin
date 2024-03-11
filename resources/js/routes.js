@@ -1,22 +1,19 @@
 // resources/js/routes.js
 
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue';
-import Gallery from './components/Gallery.vue';
-import Contact from './components/Contact.vue';
-
-Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/gallery', component: Gallery },
-  { path: '/contact', component: Contact },
+  {
+    path: '/',
+    component: Home,
+  },
+  // Add other routes if needed
 ];
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(),
   routes,
-  mode: 'history', // Use HTML5 history mode for cleaner URLs
 });
 
 export default router;
