@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -8,15 +14,21 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
 |
 */
 
-// Use HomeController@index for all routes except '/'
-Route::get('/{any}', 'HomeController@index')->where('any', '^(?!$).*$');
+Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
+Route::post('/contact', ContactController::class)->name('contact');
 
-// Use a separate route for the root URL '/'
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::resource('/skills', SkillController::class);
+    Route::resource('/projects', ProjectController::class);
 });
+
+require __DIR__ . '/auth.php';
