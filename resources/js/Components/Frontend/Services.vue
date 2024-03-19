@@ -19,7 +19,7 @@
       }"
     >
       <div class="flex flex-col items-center text-center">
-        <h2 class="section-title">What I do for clients</h2>
+        <h2 class="section-title">Services offerts à nos clients</h2>
         <p class="subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam
           labore nisium illum cupiditate reiciendis a numquam
@@ -55,7 +55,7 @@
               />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">Web Design</h4>
+          <h4 class="text-xl font-medium mb-2">Dessins</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
             perferendis volm quibusdam ullam qui dolore.
@@ -95,7 +95,7 @@
               />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">Web Development</h4>
+          <h4 class="text-xl font-medium mb-2">Création d'affiches</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
             perferendis volm quibusdam ullam qui dolore.
@@ -130,7 +130,7 @@
               />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">Branding</h4>
+          <h4 class="text-xl font-medium mb-2">Peinture</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
             perferendis volm quibusdam ullam qui dolore.
@@ -165,7 +165,7 @@
               />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">SEO</h4>
+          <h4 class="text-xl font-medium mb-2">Traveaux Personnalisés</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
             perferendis volm quibusdam ullam qui dolore.
