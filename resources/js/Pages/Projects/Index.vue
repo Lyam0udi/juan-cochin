@@ -20,7 +20,7 @@
               text-white
               rounded-md
             "
-            >New Project</Link
+            >Nouveau Œuvre d'art</Link
           >
         </div>
         <div class="overflow-x-auto relative">

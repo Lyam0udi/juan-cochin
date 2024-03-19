@@ -18,7 +18,7 @@
               text-white
               rounded-md
             "
-            >New Skill</Link
+            >Nouvelle Catégorie</Link
           >
         </div>
 

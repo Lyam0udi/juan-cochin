@@ -57,7 +57,7 @@ class ProjectController extends Controller
                 'project_url' => $request->project_url
             ]);
 
-            return Redirect::route('projects.index')->with('message', 'Project created successfully.');
+            return Redirect::route('projects.index')->with('message', 'Œuvre artistique crée avec succès.');
         }
         return Redirect::back();
     }

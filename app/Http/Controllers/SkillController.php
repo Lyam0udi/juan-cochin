@@ -52,7 +52,7 @@ class SkillController extends Controller
                 'image' => $image
             ]);
 
-            return Redirect::route('skills.index')->with('message', 'Skill created successfully.');
+            return Redirect::route('skills.index')->with('message', 'Catégorie créée avec succès.');
         }
         return Redirect::back();
     }

@@ -3,7 +3,7 @@
   <BreezeAuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        New Skill
+        Nouvelle Catégorie
       </h2>
     </template>
 
@@ -11,7 +11,7 @@
       <div class="max-w-md mx-auto sm:px-6 lg:px-8 bg-white">
         <form class="p-4" @submit.prevent="submit">
           <div>
-            <BreezeLabel for="name" value="Name" />
+            <BreezeLabel for="name" value="Nom de la catégorie" />
             <BreezeInput
               id="name"
               type="text"
@@ -38,7 +38,7 @@
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             >
-              Store
+              Enregistrer
             </BreezeButton>
           </div>
         </form>

@@ -3,7 +3,7 @@
   <BreezeAuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        New Project
+        Nouveau Œuvre d'art
       </h2>
     </template>
 
@@ -11,7 +11,7 @@
       <div class="max-w-md mx-auto sm:px-6 lg:px-8 bg-white">
         <form class="p-4" @submit.prevent="submit">
           <div>
-            <BreezeLabel for="skill_id" value="Skill" />
+            <BreezeLabel for="skill_id" value="Catégorie" />
             <select
               v-model="form.skill_id"
               id="skill_id"
@@ -37,7 +37,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.skill_id" />
           </div>
           <div>
-            <BreezeLabel for="name" value="Name" />
+            <BreezeLabel for="name" value="Titre" />
             <BreezeInput
               id="name"
               type="text"
