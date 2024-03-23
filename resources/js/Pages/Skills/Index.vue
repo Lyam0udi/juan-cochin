@@ -18,7 +18,7 @@
               text-white
               rounded-md
             "
-            >Nouvelle Catégorie</Link
+            >Ajouter Catégorie</Link
           >
         </div>
 
