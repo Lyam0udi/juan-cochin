@@ -11,6 +11,7 @@
         opacity: 1,
         y: 0,
       }"
+      
     >
       <div class="flex flex-col xl:flex-row gap-24">
         <img
