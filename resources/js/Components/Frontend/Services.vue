@@ -21,8 +21,9 @@
       <div class="flex flex-col items-center text-center">
         <h2 class="section-title">Services offerts à nos clients</h2>
         <p class="subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam
-          labore nisium illum cupiditate reiciendis a numquam
+          Cette partie sera consacrée pour lister les services offerts à nos 
+          clients, pour toute sorte de travail Personnalisé, n'hesitez pas à 
+          me contacter.
         </p>
       </div>
       <div class="grid lg:grid-cols-4 gap-8">
