@@ -32,7 +32,7 @@
             <h2 class="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3">
               À propos de l'artiste
             </h2>
-            <P class="mb-4 text-accent">Juan Cochín</P>
+            <P class="mb-4 text-accent">Juan Cochin</P>
             <hr class="mb-8 opacity-90 dark:opacity-5" />
             <p class="mb-8">
               est un artiste passionné au style distinctif qui capture l'essence des émotions et des récits. <br />
