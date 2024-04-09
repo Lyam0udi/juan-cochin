@@ -21,7 +21,7 @@
       <div class="flex flex-col items-center text-center">
         <h2 class="section-title">Services offerts à nos clients</h2>
         <p class="subtitle">
-          Cette partie sera consacrée pour lister les services offerts à nos 
+          Cette partie est consacrée pour lister les services offerts à nos 
           clients, pour toute sorte de travail Personnalisé, n'hesitez pas à 
           me contacter.
         </p>
