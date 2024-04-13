@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <Head title="Welcome to portfolio" />
+  <Head title="Juan Cochin" />
   <FrontendLayout>
     <!-- Hero primary -->
     <Hero />
