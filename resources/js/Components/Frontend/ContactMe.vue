@@ -93,7 +93,7 @@ const submit = () => {
             </div>
             <div>
               <h4 class="font-body text-xl mb-1">Avez vous des questions?</h4>
-              <P class="mb-1 text-paragraph">Je suis joignable via </P>
+              <P class="mb-1 text-paragraph">Je suis joignable via ma boite mail</P>
               <p class="text-accent font-normal">Juan@gmail.com</p>
             </div>
           </div>
@@ -189,7 +189,7 @@ const submit = () => {
           }}</span>
 
           <button class="btn btn-lg bg-accent hover:bg-secondary text-white">
-            Send message
+            Envoyer Mail
           </button>
         </form>
       </div>
