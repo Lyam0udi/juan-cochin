@@ -35,7 +35,7 @@ onMounted(() => {
       <a href="/" class="flex items-center">
         <img
           src="/img/logo.png"
-          class="mr-3 h-6 sm:h-9"
+          class="mr-3 h-8 sm:h-12"
           alt="LogoJuanCochin"
           loading="lazy"
         />
@@ -47,7 +47,7 @@ onMounted(() => {
             whitespace-nowrap
             dark:text-white
           "
-          >Juan Coachin</span
+          >Juan Cochin</span
         >
       </a>
       <button

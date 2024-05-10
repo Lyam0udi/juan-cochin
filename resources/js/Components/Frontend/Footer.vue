@@ -15,14 +15,24 @@
       >
         <div class="flex space-x-6 items-center justify-center">
           <img
-            class="h-8 w-auto"
+            class="h-12 w-auto"
             src="/img/logo.png"
             alt="LogoJuanCochin"
             loading="lazy"
           />
+          <span
+          class="
+            self-center
+            text-xl
+            font-semibold
+            whitespace-nowrap
+            dark:text-white
+          "
+          >Juan Cochin</span
+        >
         </div>
         <p class="text-paragraph opacity-80 text-[15px]">
-          &copy; 2024 Juan Cochin All right reserved.
+          &copy; 2024 Juan Cochin. Tous droits réservés.
         </p>
       </div>
     </div>
