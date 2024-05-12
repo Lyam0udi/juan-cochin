@@ -15,7 +15,7 @@
       >
         <div class="flex space-x-6 items-center justify-center">
           <img
-            class="h-12 w-auto"
+            class="h-20 w-auto"
             src="/img/logo.png"
             alt="LogoJuanCochin"
             loading="lazy"

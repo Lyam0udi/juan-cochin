@@ -35,7 +35,7 @@ onMounted(() => {
       <a href="/" class="flex items-center">
         <img
           src="/img/logo.png"
-          class="mr-3 h-8 sm:h-12"
+          class="mr-3 h-10 sm:h-16"
           alt="LogoJuanCochin"
           loading="lazy"
         />
