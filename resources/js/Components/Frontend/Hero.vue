@@ -1,5 +1,3 @@
-<script setup>
-</script>
 <template>
   <section
     id="home"
@@ -9,7 +7,7 @@
       items-center
       bg-light-primary
       dark:bg-dark-primary
-      py-32
+      py-40    <!-- Adjusted padding here -->
       lg:py-0
       overflow-hidden
     "
@@ -27,8 +25,7 @@
       }"
     >
       <div class="flex flex-col md:flex-row items-center h-full pt-8">
-        <div class="flex-1 flex flex-col items-center lg:items-start">
-          <!-- <p class="text-lg text-accent text-md mb-[22px]">Hey, I'm Tony! 👋</p> -->
+        <div class="flex-1 flex flex-col items-center lg:items-start"> 
           <h2
             class="
               text-4xl
@@ -41,33 +38,34 @@
           >
             Galerie & Art 
             <br />
-            <!-- Dessins, Affiche, Peinture. -->
           </h2>
           <p
             class="
               pt-4
-              pb-8
-              md:pt-6 md:pb-12
+              pb-2
+              md:pt-6 md:pb-3
               max-w-[480px]
               text-lg text-center
               lg:text-left
             "
           >
-            Bienvenue dans le monde vibrant de l'expression artistique de Juan Cochín. Découvrez une fusion de couleurs, d'émotions et de créativité qui définit l'approche unique de Juan envers l'art.
+            L’univers de Juan Cochin est mêlé de détails
+            <br />
+            concrets tels des insectes,
+            <br />
+            des humanoïdes ainsi que des êtres imaginaires,
+            <br />
+            dans un monde où ce mêlent couleurs et matières.
+            <br />
+            Les thèmes abordés qu’ils soient bustes de femme ou bien encore maritimes,
+            <br />
+            font d’eux des poèmes denses et lumineux.
+            <br />
+            <br />
+            « L’imaginaire n’a pour limite que celle des plus beaux rêves de l’être »
           </p>
-          <!-- <button
-            class="
-              btn btn-md
-              bg-accent
-              hover:bg-light-secondary hover:text-light-tail-500
-              dark:hover:bg-dark-secondary dark:hover:text-dark-navy-100
-              md:btn-lg
-              transition-all
-            "
-          >
-            Work with me
-          </button> -->
-          <div class="pt-12">
+          
+          <div > <!-- Adjusted spacing here // class="pt-8"-->
             <h5
               class="
                 text-lg
@@ -82,7 +80,7 @@
             >
               Suivez-moi sur
             </h5>
-            <div class="flex items-center mb-6">
+            <div class="flex items-center"> 
               <a
                 class="
                   w-12
@@ -99,7 +97,7 @@
                   mr-3
                   sm:mr-4
                 "
-                href="https://facebook.com/laraveller"
+                href="https://facebook.com/URLJuan"
               >
                 <svg
                   width="8"
@@ -112,93 +110,33 @@
                   />
                 </svg>
               </a>
-              <a
-                class="
+              
+              <a class="
                   w-12
                   h-12
                   rounded-full
                   flex
                   items-center
                   justify-center
-                  border border-white
+                  border
+                  border-white
                   text-black
                   dark:text-white
-                  hover:bg-light-secondary hover:border-light-secondary
-                  dark:hover:bg-dark-secondary dark:hover:border-dark-secondary
+                  hover:bg-light-secondary
+                  hover:border-light-secondary
+                  dark:hover:bg-dark-secondary
+                  dark:hover:border-dark-secondary
                   mr-3
                   sm:mr-4
-                "
-                href="https://facebook.com/laraveller"
+              "
+              href="https://instagram.com/your_username"
               >
-                <svg
-                  width="16"
-                  height="12"
-                  viewBox="0 0 16 12"
-                  class="fill-current"
-                >
-                  <path
-                    d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z"
-                  />
-                </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+
               </a>
-              <a
-                class="
-                  w-12
-                  h-12
-                  rounded-full
-                  flex
-                  items-center
-                  justify-center
-                  border border-white
-                  text-black
-                  dark:text-white
-                  hover:bg-light-secondary hover:border-light-secondary
-                  dark:hover:bg-dark-secondary dark:hover:border-dark-secondary
-                  mr-3
-                  sm:mr-4
-                "
-                href="https://facebook.com/laraveller"
-              >
-                <svg
-                  width="16"
-                  height="12"
-                  viewBox="0 0 16 12"
-                  class="fill-current"
-                >
-                  <path
-                    d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"
-                  />
-                </svg>
-              </a>
-              <a
-                class="
-                  w-12
-                  h-12
-                  rounded-full
-                  flex
-                  items-center
-                  justify-center
-                  border border-white
-                  text-black
-                  dark:text-white
-                  hover:bg-light-secondary hover:border-light-secondary
-                  dark:hover:bg-dark-secondary dark:hover:border-dark-secondary
-                  mr-3
-                  sm:mr-4
-                "
-                href="https://facebook.com/laraveller"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  class="fill-current"
-                >
-                  <path
-                    d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"
-                  />
-                </svg>
-              </a>
+
             </div>
           </div>
         </div>
