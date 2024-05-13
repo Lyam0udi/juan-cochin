@@ -11,7 +11,6 @@
         opacity: 1,
         y: 0,
       }"
-      
     >
       <div class="flex flex-col xl:flex-row gap-24">
         <img
@@ -30,16 +29,26 @@
         >
           <div class="flex flex-col">
             <h2 class="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3">
-              À propos de l'artiste
+              Juan Cochin
             </h2>
-            <P class="mb-4 text-accent">Juan Cochin</P>
-            <hr class="mb-8 opacity-90 dark:opacity-5" />
+            <P class="mb-4 text-accent"> est né en 1994 au Mexique et vit en France depuis 1997.</P>
+            <hr class="mb-4 opacity-90 dark:opacity-5" />
             <p class="mb-8">
-              est un artiste passionné au style distinctif qui capture l'essence des émotions et des récits. <br />
-              <br />
-              Explorez le parcours et l'inspiration derrière chaque chef-d'œuvre.
+              Il grandit à Nantes.
+              Les gants de boxe, les plumes et les pinceaux ne sont jamais loin de sa main.
+              La peinture et l’encre viennent toujours couvrir ses toiles et raconter un univers imaginaire de révoltes et d’espoir.
             </p>
           </div>
+          <div class="mb-4">
+            <p class="italic">« La nature humaine m’inspire.</p>
+            <p class="italic">Lorsque la plume rencontre la toile,</p>
+            <p class="italic">une certaine énergie m’emporte,</p>
+            <p class="italic">afin de créer un univers fantasmagorique et irréel.</p>
+            <p class="italic">Le côté organique qui se dégage de certains tableaux suit une partition de musique qui me vient de l’intérieur ».</p>
+          </div>
+          <p class="mb-4">
+            Pour toute question ou projet, contactez-moi dès maintenant !
+            </p>
           <a href="#contact" class="btn btn-md bg-accent text-light-tail-100">
             Contactez moi
           </a>
