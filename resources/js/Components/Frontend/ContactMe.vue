@@ -46,7 +46,7 @@ const submit = () => {
         <p class="subtitle">
           Connectez-vous directement avec Juan. Que vous ayez des questions, 
           des propositions de collaboration ou simplement envie de partager vos pensées, 
-          Juan Cochín accueille vos messages. Remplissez le formulaire 
+          Juan Cochin accueille vos messages. Remplissez le formulaire 
           ci-dessous et que la conversation commence.
         </p>
       </div>
