@@ -25,7 +25,7 @@ defineProps({
       <div class="flex flex-col items-center text-center">
         <h2 class="section-title">Galerie</h2>
         <p class="subtitle">
-          Plongez-vous dans le festin visuel des œuvres de Juan Cochín. Des portraits captivants aux merveilles abstraites, 
+          Plongez-vous dans le festin visuel des œuvres de Juan Cochin. Des portraits captivants aux merveilles abstraites, 
           chaque pièce raconte une histoire, vous invitant à vivre la beauté de l'imagination de l'artiste
         </p>
       </div>
