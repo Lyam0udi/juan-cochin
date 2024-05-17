@@ -1,29 +1,11 @@
 <template>
   <div class="bg-light-tail-100 dark:bg-dark-navy-500">
-    <div
-      class="
-        container
-        mx-auto
-        py-12
-        px-4
-        sm:px-6
-        lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8
-      "
-    >
-      <h2
-        class="
-          text-3xl
-          font-bold
-          tracking-tight
-          text-light-tail-500
-          dark:text-dark-navy-100
-          sm:text-4xl
-        "
-      >
+    <div class="container mx-auto py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-light-tail-500 dark:text-dark-navy-100 sm:text-4xl">
         <span class="block">Hâte de voir ma galerie ?</span>
-        <span class="block text-dark-primary dark:text-white"
-          >Explorez un monde d'émotions et de créativité dans ma galerie d'art.</span
-        >
+        <span class="block text-dark-primary dark:text-white">
+          Explorez un monde d'émotions et de créativité dans ma galerie d'art.
+        </span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
@@ -45,9 +27,21 @@
               dark:text-white
               hover:bg-light-primary
               dark:hover:bg-dark-primary
+              transition
+              duration-200
+              ease-in-out
+              transform
+              hover:scale-105
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-light-primary
+              dark:focus:ring-dark-primary
             "
-            >Galerie</a
+            aria-label="Go to gallery"
           >
+            Galerie
+          </a>
         </div>
       </div>
     </div>
