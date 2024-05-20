@@ -135,7 +135,7 @@ const submit = () => {
             </div>
             <div>
               <h4 class="font-body text-xl mb-1">Emplacement actuel</h4>
-              <P class="mb-1 text-paragraph">Ville, Pays</P>
+              <P class="mb-1 text-paragraph">Ville, et Pays</P>
               <p class="text-accent font-normal">Servant des clients à travers le monde</p>
             </div>
           </div>
