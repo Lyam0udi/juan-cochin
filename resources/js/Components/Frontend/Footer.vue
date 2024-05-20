@@ -1,35 +1,20 @@
 <script setup>
 </script>
+
 <template>
-  <footer class="bg-light-secondary dark:bg-dark-secondary py-12">
+  <footer class="bg-light-secondary dark:bg-dark-secondary py-4">
     <div class="container mx-auto">
-      <div
-        class="
-          flex flex-col
-          md:flex-row
-          space-y-6
-          lg:space-y-0
-          items-center
-          justify-between
-        "
-      >
+      <div class="flex flex-col md:flex-row space-y-6 lg:space-y-0 items-center justify-between">
         <div class="flex space-x-6 items-center justify-center">
           <img
             class="h-20 w-auto"
             src="/img/logo.png"
-            alt="LogoJuanCochin"
+            alt="Juan Cochin Logo"
             loading="lazy"
           />
-          <span
-          class="
-            self-center
-            text-xl
-            font-semibold
-            whitespace-nowrap
-            dark:text-white
-          "
-          >Juan Cochin</span
-        >
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            Juan Cochin
+          </span>
         </div>
         <p class="text-paragraph opacity-80 text-[15px]">
           &copy; 2024 Juan Cochin. Tous droits réservés.

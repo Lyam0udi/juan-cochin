@@ -78,7 +78,7 @@
                 mb-2
               "
             >
-              Suivez-moi sur
+              Suivez-moi sur :
             </h5>
             <div class="flex items-center"> 
               <a
