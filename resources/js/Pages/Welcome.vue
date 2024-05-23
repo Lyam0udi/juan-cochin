@@ -29,7 +29,7 @@ defineProps({
     <!-- Portfolio primary -->
     <Portfolio :skills="skills" :projects="projects" />
     <!-- Services secondary -->
-    <!-- <Services /> -->
+    <Services />
     <!-- Contact primary -->
     <ContactMe />
   </FrontendLayout>
