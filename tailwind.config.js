@@ -18,7 +18,7 @@ module.exports = {
         container: {
             padding: {
                 DEFAULT: "1rem",
-                lg: "3rem",
+                lg: "7rem", // Must be updated latter
             },
         },
         extend: {
