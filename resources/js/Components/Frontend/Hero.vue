@@ -4,16 +4,17 @@
     class="
       lg:h-[85vh]
       flex
+      flex-col
       items-center
       bg-light-primary
       dark:bg-dark-primary
-      py-40    <!-- Adjusted padding here -->
+      py-40
       lg:py-0
       overflow-hidden
     "
   >
     <div
-      class="container mx-auto h-full"
+      class="container mx-auto h-full" 
       v-motion
       :initial="{
         opacity: 0,
@@ -23,8 +24,11 @@
         opacity: 1,
         y: 0,
       }"
+      
     >
-      <div class="flex flex-col md:flex-row items-center h-full pt-8">
+    <!-- style="padding-right: 3rem; padding-left: 3rem;" -->
+    
+      <div class="flex flex-col md:flex-row items-center h-full pt-14">
         <div class="flex-1 flex flex-col items-center lg:items-start"> 
           <h2
             class="
@@ -140,9 +144,9 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-1 justify-end items-center h-full mt-8 md:mt-0">
+        <div class="flex flex-1 justify-center md:justify-end items-center h-full mt-8 md:mt-0">
           <img
-            class="rounded-lg"
+            class="rounded-lg w-[90%] md:w-[90%] lg:w-[90%]"
             src="/img/accueil.jpeg"
             alt="Accueil image"
             loading="lazy"
