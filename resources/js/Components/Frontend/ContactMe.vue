@@ -29,7 +29,7 @@ const submit = () => {
 
 <template>
   <section id="contact" class="container section bg-light-primary dark:bg-dark-primary py-20">
-    <div class="container mx-auto px-4 lg:px-0 flex justify-end">
+    <div class="mx-auto px-4 lg:px-0 flex justify-end">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-4xl font-bold mb-8">Contactez-moi</h2>

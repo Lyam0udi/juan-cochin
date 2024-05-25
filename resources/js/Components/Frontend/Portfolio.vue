@@ -7,7 +7,7 @@ defineProps({
 </script>
 <template>
   <section
-    id="portfolio"
+    id="gallery"
     class="section bg-light-primary dark:bg-dark-primary min-h-[1400px]"
   >
     <div
