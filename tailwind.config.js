@@ -43,8 +43,8 @@ module.exports = {
                 },
         
                 // Define a custom color for paragraphs
-                paragraph: "#5C5C5C", // Light mode paragraph color
-                "dark-paragraph": "#B0B0B0", // Dark mode paragraph color
+                paragraph: "#878e99", // Light mode paragraph color
+                // "dark-paragraph": "#B0B0B0", // Dark mode paragraph color
         
                 // Include Tailwind's default colors
                 blue: colors.blue,
