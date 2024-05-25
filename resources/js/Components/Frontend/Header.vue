@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { toggleDarkMode } from "../../darkModeToggle";
-const showMobileMenu = ref("false");
+const showMobileMenu = ref(false);
 const scrollBg = ref(false);
 
 const navigations = [
@@ -11,6 +11,7 @@ const navigations = [
   { name: "Services", href: "#services" },
   { name: "Contact", href: "#contact" },
 ];
+
 const setScrollBg = (value) => {
   scrollBg.value = value;
 };
@@ -21,6 +22,7 @@ onMounted(() => {
   });
 });
 </script>
+
 <template>
   <nav
     class="w-full fixed z-20 border-gray-200 px-2 sm:px-4 py-2.5 rounded"
@@ -51,75 +53,81 @@ onMounted(() => {
           >Juan Cochin</span
         >
       </a>
-      
-      <!-- /Dark/white mode button/ -->
-      <button
-        @click="toggleDarkMode"
-        class="
-          inline-flex
-          items-center
-          p-2
-          ml-3
-          text-sm text-gray-500
-          rounded-lg
-          hover:bg-gray-100
-          focus:outline-none focus:ring-2 focus:ring-gray-200
-          dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
-        "
-        aria-controls="navbar-default"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Toggle Dark/Light Mode</span>
-        <svg
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </button>
 
-
-      <button
-        @click="showMobileMenu = !showMobileMenu"
-        data-collapse-toggle="navbar-default"
-        type="button"
-        class="
-          inline-flex
-          items-center
-          p-2
-          ml-3
-          text-sm text-gray-500
-          rounded-lg
-          md:hidden
-          hover:bg-gray-100
-          focus:outline-none focus:ring-2 focus:ring-gray-200
-          dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
-        "
-        aria-controls="navbar-default"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+      <!-- Dark/white mode button for small devices -->
+      <div class="flex items-center md:hidden space-x-2">
+        <button
+          @click="toggleDarkMode"
+          class="
+            inline-flex
+            items-center
+            p-2
+            text-sm text-gray-500
+            rounded-lg
+            hover:bg-gray-100
+            focus:outline-none focus:ring-2 focus:ring-gray-200
+            dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+          "
+          aria-controls="navbar-default"
+          aria-expanded="false"
         >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </button>
+          <span class="sr-only">Toggle Dark/Light Mode</span>
+          <!-- SVG icon for dark/light mode -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
+              fill="currentColor"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.4183 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
+
+        <button
+          @click="showMobileMenu = !showMobileMenu"
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="
+            inline-flex
+            items-center
+            p-2
+            text-sm text-gray-500
+            rounded-lg
+            hover:bg-gray-100
+            focus:outline-none focus:ring-2 focus:ring-gray-200
+            dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+          "
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
       <div
         class="w-full md:block md:w-auto"
         :class="{ hidden: showMobileMenu }"
@@ -154,6 +162,48 @@ onMounted(() => {
               aria-current="page"
               >{{ navigation.name }}</a
             >
+          </li>
+
+          <!-- Dark/white mode button for normal devices -->
+          <li class="hidden md:block">
+            <button
+              @click="toggleDarkMode"
+              class="
+                inline-flex
+                items-center
+                p-2
+                ml-3
+                text-sm text-gray-500
+                rounded-lg
+                hover:bg-gray-100
+                focus:outline-none focus:ring-2 focus:ring-gray-200
+                dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+              "
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle Dark/Light Mode</span>
+              <!-- SVG icon for dark/light mode -->
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.4183 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
           </li>
         </ul>
       </div>
