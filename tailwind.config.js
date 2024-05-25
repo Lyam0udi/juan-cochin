@@ -24,25 +24,36 @@ module.exports = {
         },
         extend: {
             colors: {
-                "light-primary": "#FAF1E6",
-                "light-secondary": "#FDFAF6",
-                "light-tail-100": "#A9DED2",
-                "light-tail-500": "#54BAB9",
-                "dark-primary": "#050402",
-                "dark-secondary": "#1C1D24",
-                "dark-navy-100": "#07567D",
-                "dark-navy-500": "#292D42",
+                // Define your light mode colors
+                "light-primary": "#FFFFFF", // Light mode primary color
+                "light-secondary": "#F0F0F0", // Light mode secondary color
+                "light-tail-100": "#CCE7E8", // Light mode accent color
+                "light-tail-500": "#007C7C", // Light mode text color
+        
+                // Define your dark mode colors
+                "dark-primary": "#121212", // Dark mode primary color
+                "dark-secondary": "#1E1E1E", // Dark mode secondary color
+                "dark-navy-100": "#07567D", // Dark mode accent color
+                "dark-navy-500": "#292D42", // Dark mode text color
+        
+                // Define a custom accent color with hover state
                 accent: {
-                    DEFAULT: "#ac6b34",
-                    hover: "#925a2b",
+                    DEFAULT: "#FF8C00", // Default accent color
+                    hover: "#FF7F11", // Accent color when hovered over
                 },
-                paragraph: "#878e99",
+        
+                // Define a custom color for paragraphs
+                paragraph: "#5C5C5C", // Light mode paragraph color
+                "dark-paragraph": "#B0B0B0", // Dark mode paragraph color
+        
+                // Include Tailwind's default colors
                 blue: colors.blue,
                 indigo: colors.indigo,
                 green: colors.green,
                 red: colors.red,
             },
         },
+        
     },
 
     plugins: [require("@tailwindcss/forms")],
