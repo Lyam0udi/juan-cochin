@@ -156,7 +156,7 @@ onMounted(() => {
                 text-light-tail-500
                 rounded
                 dark:text-dark-navy-100
-                hover:text-light-tail-100
+                hover:text-light-tail-100 
                 dark:hover:text-white
               "
               aria-current="page"
@@ -173,11 +173,12 @@ onMounted(() => {
                 items-center
                 p-2
                 ml-3
-                text-sm text-gray-500
+                text-sm
+                text-light-tail-500
                 rounded-lg
                 hover:bg-gray-100
                 focus:outline-none focus:ring-2 focus:ring-gray-200
-                dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+                dark:text-dark-navy-100 dark:hover:bg-gray-700 dark:focus:ring-gray-600
               "
               aria-controls="navbar-default"
               aria-expanded="false"
