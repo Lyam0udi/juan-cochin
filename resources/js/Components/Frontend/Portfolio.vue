@@ -1,10 +1,12 @@
 <script setup>
 import Projects from "./Projects.vue";
+
 defineProps({
   skills: Object,
   projects: Object,
 });
 </script>
+
 <template>
   <section
     id="gallery"
