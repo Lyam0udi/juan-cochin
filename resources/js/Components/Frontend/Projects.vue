@@ -43,7 +43,7 @@ const filterProjects = (id) => {
                 : 'bg-light-tail-500 dark:bg-dark-navy-100',
             ]"
           >
-            All
+            Tout
           </button>
         </li>
         <li
