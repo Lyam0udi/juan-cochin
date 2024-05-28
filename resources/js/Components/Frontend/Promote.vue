@@ -1,7 +1,7 @@
 <template>
   <div class="bg-light-tail-100 dark:bg-dark-navy-500">
-    <div class="container mx-auto py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-24">
-      <h2 class="text-3xl font-bold tracking-tight text-light-tail-500 dark:text-dark-navy-100 sm:text-4xl">
+    <div class="container mx-auto py-10 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-10 lg:px-24">
+      <h2 class="text-2xl font-bold tracking-tight text-light-tail-500 dark:text-dark-navy-100 sm:text-3xl">
         <span class="block">Envie de découvrir ma galerie ?</span>
         <span class="block text-dark-primary dark:text-white">
           Plongez dans un univers d'émotions et de créativité au cœur de mon espace artistique.
@@ -15,20 +15,20 @@
               inline-flex
               items-center
               justify-center
-              rounded-md
+              rounded-full
               border border-transparent
               bg-light-secondary
               dark:bg-dark-secondary
-              px-5
-              py-3
-              text-base
-              font-medium
+              px-6
+              py-4
+              text-lg
+              font-bold
               text-dark-primary
               dark:text-white
               hover:bg-light-primary
               dark:hover:bg-dark-primary
               transition
-              duration-200
+              duration-300
               ease-in-out
               transform
               hover:scale-105
@@ -40,7 +40,7 @@
             "
             aria-label="Go to gallery"
           >
-            Galerie
+            Explorez ma galerie
           </a>
         </div>
       </div>
