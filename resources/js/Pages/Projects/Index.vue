@@ -37,8 +37,8 @@
             >
               <tr>
                 <th scope="col" class="py-3 px-6">ID</th>
-                <th scope="col" class="py-3 px-6">Name</th>
-                <th scope="col" class="py-3 px-6">Skill</th>
+                <th scope="col" class="py-3 px-6">Titre</th>
+                <th scope="col" class="py-3 px-6">Catégorie</th>
                 <th scope="col" class="py-3 px-6">Image</th>
                 <th scope="col" class="py-3 px-6"></th>
               </tr>
