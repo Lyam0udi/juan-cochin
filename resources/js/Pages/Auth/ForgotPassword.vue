@@ -20,29 +20,34 @@ const submit = () => {
 </script>
 
 <template>
-    <BreezeGuestLayout>
+    
         <Head title="Forgot Password" />
 
-        <div class="mb-4 text-sm text-gray-600">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
-        </div>
+        <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+                <div class="flex justify-center mb-6">
+                    <img src="/img/logo.png" alt="Logo" class="h-16">
+                </div>
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6"  style="color: #4b5563;">Mot de passe oublié?</h2>
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
+                <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+                    {{ status }}
+                </div>
 
-        <form @submit.prevent="submit">
-            <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
-                <BreezeInputError class="mt-2" :message="form.errors.email" />
+                <form @submit.prevent="submit">
+                    <div>
+                        <BreezeLabel for="email" value="E-mail" />
+                        <BreezeInput id="email" type="email" class="input mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+                        <BreezeInputError class="mt-2" :message="form.errors.email" />
+                    </div>
+
+                    <div class="flex items-center justify-end mt-4">
+                        <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                            Envoyer le lien de réinitialisation du mot de passe
+                        </BreezeButton>
+                    </div>
+                </form>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Email Password Reset Link
-                </BreezeButton>
-            </div>
-        </form>
-    </BreezeGuestLayout>
+        </div>
+    <!-- </BreezeGuestLayout> -->
 </template>

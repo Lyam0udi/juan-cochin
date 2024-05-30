@@ -112,7 +112,7 @@ const showingNavigationDropdown = ref(false);
                       method="post"
                       as="button"
                     >
-                      Log Out
+                      Déconnexion
                     </BreezeDropdownLink>
                   </template>
                 </BreezeDropdown>
@@ -203,7 +203,7 @@ const showingNavigationDropdown = ref(false);
                 method="post"
                 as="button"
               >
-                Log Out
+                Déconnexion
               </BreezeResponsiveNavLink>
             </div>
           </div>

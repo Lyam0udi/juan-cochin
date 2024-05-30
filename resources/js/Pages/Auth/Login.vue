@@ -36,7 +36,7 @@ const submit = () => {
                         <img src="/img/logo.png" alt="Logo" class="h-16">
                     </Link>
                 </div>
-                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Log in</h2>
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6" style="color: #4b5563;">Se connecter</h2>
 
                 <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
                     {{ status }}
@@ -44,13 +44,13 @@ const submit = () => {
 
                 <form @submit.prevent="submit">
                     <div>
-                        <BreezeLabel for="email" value="Email" />
+                        <BreezeLabel for="email" value="E-mail" />
                         <BreezeInput id="email" type="email" class="input mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
                         <BreezeInputError class="mt-2" :message="form.errors.email" />
                     </div>
 
                     <div class="mt-4">
-                        <BreezeLabel for="password" value="Password" />
+                        <BreezeLabel for="password" value="Mot de passe" />
                         <BreezeInput id="password" type="password" class="input mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
                         <BreezeInputError class="mt-2" :message="form.errors.password" />
                     </div>
@@ -58,17 +58,17 @@ const submit = () => {
                     <div class="block mt-4">
                         <label class="flex items-center">
                             <BreezeCheckbox name="remember" v-model:checked="form.remember" />
-                            <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                            <span class="ml-2 text-sm text-gray-600">Se souvenir de moi</span>
                         </label>
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
                         <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
-                            Forgot your password?
+                            Mot de passe oublié ?
                         </Link>
 
                         <BreezeButton class="btn ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            Log in
+                            SE CONNECTER
                         </BreezeButton>
                     </div>
                 </form>

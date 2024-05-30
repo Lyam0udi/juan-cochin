@@ -143,19 +143,6 @@
   </section>
 </template>
 
-<script>
-// Lazy load the image to avoid initial load delays
-export default {
-  mounted() {
-    const img = new Image();
-    img.src = "/img/accueil.jpeg";
-    img.onload = () => {
-      document.querySelector('img[alt="Accueil image"]').src = img.src;
-    };
-  },
-};
-</script>
-
 <style scoped>
 /* Define CSS animation keyframes */
 @keyframes fadeInUp {
