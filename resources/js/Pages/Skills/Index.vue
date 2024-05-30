@@ -36,9 +36,9 @@
             >
               <tr>
                 <th scope="col" class="py-3 px-6">ID</th>
-                <th scope="col" class="py-3 px-6">Name</th>
+                <th scope="col" class="py-3 px-6">Nom</th>
                 <th scope="col" class="py-3 px-6">Image</th>
-                <th scope="col" class="py-3 px-6"></th>
+                <th scope="col" class="py-3 px-6">Options</th>
               </tr>
             </thead>
             <tbody>
@@ -68,7 +68,7 @@
                   <Link
                     :href="route('skills.edit', skill.id)"
                     class="font-medium text-blue-500 hover:text-blue-700 mr-2"
-                    >Edit</Link
+                    >Modifier</Link
                   >
                   <Link
                     :href="route('skills.destroy', skill.id)"
@@ -76,8 +76,8 @@
                     as="button"
                     type="button"
                     class="font-medium text-red-500 hover:text-red-700 mr-2"
-                    >Delete</Link
-                  >
+                    >Supprimer
+                    </Link>
                 </td>
               </tr>
             </tbody>
