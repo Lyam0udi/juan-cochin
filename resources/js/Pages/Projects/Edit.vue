@@ -1,9 +1,9 @@
 <template>
-  <Head title="New Project  " />
+  <Head title="Edit Project" />
   <BreezeAuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        New Project
+        Edit Project
       </h2>
     </template>
 
@@ -52,17 +52,45 @@
             <BreezeInputError class="mt-2" :message="$page.props.errors.name" />
           </div>
           <div>
-            <BreezeLabel for="project_url" value="URL" />
+            <BreezeLabel for="description" value="Description" />
             <BreezeInput
-              id="project_url"
+              id="description"
               type="text"
               class="mt-1 block w-full"
-              v-model="form.project_url"
-              autocomplete="projecturl"
+              v-model="form.description"
+              autocomplete="description"
             />
             <BreezeInputError
               class="mt-2"
-              :message="$page.props.errors.project_url"
+              :message="$page.props.errors.description"
+            />
+          </div>
+          <div>
+            <BreezeLabel for="taille" value="Taille" />
+            <BreezeInput
+              id="taille"
+              type="text"
+              class="mt-1 block w-full"
+              v-model="form.taille"
+              autocomplete="taille"
+            />
+            <BreezeInputError
+              class="mt-2"
+              :message="$page.props.errors.taille"
+            />
+          </div>
+          <div>
+            <BreezeLabel for="prix" value="Prix" />
+            <BreezeInput
+              id="prix"
+              type="number"
+              class="mt-1 block w-full"
+              v-model="form.prix"
+              autocomplete="prix"
+            />
+            <BreezeInputError
+              class="mt-2"
+              :message="$page.props.errors.prix"
             />
           </div>
           <div class="mt-2">
@@ -79,7 +107,7 @@
             />
           </div>
           <div class="flex items-center justify-end mt-4">
-            <BreezeButton class="ml-4"> Update </BreezeButton>
+            <BreezeButton class="ml-4">Edit</BreezeButton>
           </div>
         </form>
       </div>
@@ -102,19 +130,23 @@ const props = defineProps({
 });
 
 const form = useForm({
-  name: props.project?.name,
+  name: props.project?.name || '',
+  description: props.project?.description || '',
+  taille: props.project?.taille || '',
+  prix: props.project?.prix || null,
   image: null,
-  skill_id: props.project?.skill_id,
-  project_url: props.project?.project_url,
+  skill_id: props.project?.skill_id || null,
 });
 
 const submit = () => {
   Inertia.post(`/projects/${props.project.id}`, {
     _method: "put",
     name: form.name,
+    description: form.description,
+    taille: form.taille,
+    prix: form.prix,
     image: form.image,
     skill_id: form.skill_id,
-    project_url: form.project_url,
   });
 };
 </script>
