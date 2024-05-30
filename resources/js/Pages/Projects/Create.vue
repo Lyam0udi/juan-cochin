@@ -1,5 +1,5 @@
 <template>
-  <Head title="New Project  " />
+  <Head title="New Project" />
   <BreezeAuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -16,19 +16,7 @@
               v-model="form.skill_id"
               id="skill_id"
               name="skill_id"
-              class="
-                mt-1
-                block
-                w-full
-                pl-3
-                pr-10
-                py-2
-                text-base
-                border-gray-300
-                focus:outline-none focus:ring-indigo-500 focus:border-indigo-500
-                sm:text-sm
-                rounded-md
-              "
+              class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
             >
               <option v-for="skill in skills" :key="skill.id" :value="skill.id">
                 {{ skill.name }}
@@ -49,15 +37,35 @@
             <BreezeInputError class="mt-2" :message="form.errors.name" />
           </div>
           <div>
-            <BreezeLabel for="project_url" value="URL" />
+            <BreezeLabel for="description" value="Description" />
+            <textarea
+              id="description"
+              class="mt-1 block w-full"
+              v-model="form.description"
+            ></textarea>
+            <BreezeInputError class="mt-2" :message="form.errors.description" />
+          </div>
+          <div>
+            <BreezeLabel for="taille" value="Taille" />
             <BreezeInput
-              id="project_url"
+              id="taille"
               type="text"
               class="mt-1 block w-full"
-              v-model="form.project_url"
-              autocomplete="projecturl"
+              v-model="form.taille"
+              autocomplete="taille"
             />
-            <BreezeInputError class="mt-2" :message="form.errors.project_url" />
+            <BreezeInputError class="mt-2" :message="form.errors.taille" />
+          </div>
+          <div>
+            <BreezeLabel for="prix" value="Prix" />
+            <BreezeInput
+              id="prix"
+              type="number"
+              class="mt-1 block w-full"
+              v-model="form.prix"
+              autocomplete="prix"
+            />
+            <BreezeInputError class="mt-2" :message="form.errors.prix" />
           </div>
           <div class="mt-2">
             <BreezeLabel for="image" value="Image" />
@@ -100,7 +108,9 @@ const form = useForm({
   name: "",
   image: null,
   skill_id: "",
-  project_url: "",
+  description: "",
+  taille: "",
+  prix: "",
 });
 
 const submit = () => {
