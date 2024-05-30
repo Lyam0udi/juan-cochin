@@ -23,7 +23,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.name" />
           </div>
           <div class="mt-2">
-            <BreezeLabel for="image" value="Image" />
+            <BreezeLabel for="image" value="Logo de la catégorie" />
             <BreezeInput
               id="image"
               type="file"
