@@ -11,24 +11,12 @@
       py-20
       lg:py-0
       overflow-hidden
+      
     "
   >
     <div
-      class="container mx-auto h-full"
-      v-motion
-      :initial="{
-        opacity: 0,
-        y: 100,
-      }"
-      :visible="{
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: 'spring',
-          stiffness: 50,
-          damping: 20
-        }
-      }"
+      class="container mx-auto h-full animate-fadeInUp"
+      
     >
       <div class="flex flex-col md:flex-row items-center h-full pt-8 lg:pt-14">
         <div class="flex-1 flex flex-col items-center lg:items-start">
@@ -167,4 +155,23 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* Define CSS animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the container element */
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease forwards;
+}
+</style>
 
