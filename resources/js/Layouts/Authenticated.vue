@@ -138,7 +138,7 @@ const showingNavigationDropdown = ref(false);
                 "
               >
                 <svg
-                  class="h-6 w-6"
+                class="h-6 w-6"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -183,6 +183,18 @@ const showingNavigationDropdown = ref(false);
               :active="route().current('dashboard')"
             >
               Dashboard
+            </BreezeResponsiveNavLink>
+            <BreezeResponsiveNavLink
+              :href="route('skills.index')"
+              :active="route().current('skills.index')"
+            >
+              Catégories
+            </BreezeResponsiveNavLink>
+            <BreezeResponsiveNavLink
+              :href="route('projects.index')"
+              :active="route().current('projects.index')"
+            >
+              Œuvres d'art
             </BreezeResponsiveNavLink>
           </div>
 
