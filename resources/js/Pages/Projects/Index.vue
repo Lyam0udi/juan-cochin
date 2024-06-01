@@ -2,7 +2,7 @@
   <Head title="Projects Index" />
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">
         Œuvres d'art
       </h2>
     </template>
@@ -71,7 +71,7 @@
                   <Link
                     :href="route('projects.edit', project.id)"
                     class="font-medium text-blue-500 hover:text-blue-700 mr-2"
-                    >Edit</Link
+                    >Modifier</Link
                   >
                   <Link
                     :href="route('projects.destroy', project.id)"
@@ -79,7 +79,7 @@
                     as="button"
                     type="button"
                     class="font-medium text-red-500 hover:text-red-700 mr-2"
-                    >Delete</Link
+                    >Supprimer</Link
                   >
                 </td>
               </tr>

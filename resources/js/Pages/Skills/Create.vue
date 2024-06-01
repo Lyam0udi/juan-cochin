@@ -2,7 +2,7 @@
   <Head title="New Skill" />
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">
         Nouvelle Catégorie
       </h2>
     </template>

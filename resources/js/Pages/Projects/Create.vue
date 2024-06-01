@@ -2,7 +2,7 @@
   <Head title="New Project" />
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">
         Nouveau Œuvre d'art
       </h2>
     </template>

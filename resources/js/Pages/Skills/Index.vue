@@ -2,7 +2,7 @@
   <Head title="Skills Index" />
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">Catégories</h2>
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">Catégories</h2>
     </template>
 
     <div class="py-12">

@@ -2,8 +2,8 @@
   <Head title="Edit Project" />
   <BreezeAuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Edit Project
+      <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">
+        Modifier Œuvres d'art
       </h2>
     </template>
 
