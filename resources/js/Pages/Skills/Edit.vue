@@ -11,7 +11,7 @@
       <div class="max-w-md mx-auto sm:px-6 lg:px-8 bg-white">
         <form class="p-4" @submit.prevent="submit">
           <div>
-            <BreezeLabel for="name" value="Name" />
+            <BreezeLabel for="name" value="Nom de la catégorie :" />
             <BreezeInput
               id="name"
               type="text"
@@ -23,7 +23,7 @@
             <BreezeInputError class="mt-2" :message="$page.props.errors.name" />
           </div>
           <div class="mt-2">
-            <BreezeLabel for="image" value="Image" />
+            <BreezeLabel for="image" value="Logo de la catégorie :" />
             <BreezeInput
               id="image"
               type="file"
@@ -41,7 +41,7 @@
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             >
-              Update
+              Modifier
             </BreezeButton>
           </div>
         </form>

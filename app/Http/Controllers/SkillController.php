@@ -52,7 +52,7 @@ class SkillController extends Controller
                 'image' => $image
             ]);
 
-            return Redirect::route('skills.index')->with('message', 'Catégorie créée avec succès.');
+            return Redirect::route('skills.index')->with('message', 'La Catégorie a été créée avec succès.');
         }
         return Redirect::back();
     }
@@ -91,7 +91,7 @@ class SkillController extends Controller
             'image' => $image
         ]);
 
-        return Redirect::route('skills.index')->with('message', 'Catégorie mise à jour avec succès.');
+        return Redirect::route('skills.index')->with('message', 'La catégorie est mise à jour avec succès.');
     }
 
     /**
@@ -105,6 +105,6 @@ class SkillController extends Controller
         Storage::delete($skill->image);
         $skill->delete();
 
-        return Redirect::back()->with('message', 'Skill deleted successfully.');
+        return Redirect::back()->with('message', 'La catégorie a été supprimée avec succès.');
     }
 }
