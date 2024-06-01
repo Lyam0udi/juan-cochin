@@ -11,7 +11,7 @@
       <div class="max-w-md mx-auto sm:px-6 lg:px-8 bg-white">
         <form class="p-4" @submit.prevent="submit">
           <div>
-            <BreezeLabel for="skill_id" value="Catégorie" />
+            <BreezeLabel for="skill_id" value="Catégorie d'œuvre d'art :" />
             <select
               v-model="form.skill_id"
               id="skill_id"
@@ -25,7 +25,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.skill_id" />
           </div>
           <div>
-            <BreezeLabel for="name" value="Titre" />
+            <BreezeLabel for="name" value="Titre :" />
             <BreezeInput
               id="name"
               type="text"
@@ -37,7 +37,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.name" />
           </div>
           <div>
-            <BreezeLabel for="description" value="Description" />
+            <BreezeLabel for="description" value="Description :" />
             <textarea
               id="description"
               class="mt-1 block w-full"
@@ -46,7 +46,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.description" />
           </div>
           <div>
-            <BreezeLabel for="taille" value="Taille" />
+            <BreezeLabel for="taille" value="Taille réelle :" />
             <BreezeInput
               id="taille"
               type="text"
@@ -57,7 +57,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.taille" />
           </div>
           <div>
-            <BreezeLabel for="prix" value="Prix" />
+            <BreezeLabel for="prix" value="Prix :" />
             <BreezeInput
               id="prix"
               type="number"
@@ -68,7 +68,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.prix" />
           </div>
           <div class="mt-2">
-            <BreezeLabel for="image" value="Image" />
+            <BreezeLabel for="image" value="Image :" />
             <BreezeInput
               id="image"
               type="file"
@@ -83,7 +83,7 @@
               :class="{ 'opacity-25': form.processing }"
               :disabled="form.processing"
             >
-              Store
+              Enregistrer
             </BreezeButton>
           </div>
         </form>

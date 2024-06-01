@@ -11,7 +11,7 @@
       <div class="max-w-md mx-auto sm:px-6 lg:px-8 bg-white">
         <form class="p-4" @submit.prevent="submit">
           <div>
-            <BreezeLabel for="skill_id" value="Skill" />
+            <BreezeLabel for="skill_id" value="Catégorie d'œuvre d'art :" />
             <select
               v-model="form.skill_id"
               id="skill_id"
@@ -40,7 +40,7 @@
             </select>
           </div>
           <div>
-            <BreezeLabel for="name" value="Name" />
+            <BreezeLabel for="name" value="Titre :" />
             <BreezeInput
               id="name"
               type="text"
@@ -52,7 +52,7 @@
             <BreezeInputError class="mt-2" :message="$page.props.errors.name" />
           </div>
           <div>
-            <BreezeLabel for="description" value="Description" />
+            <BreezeLabel for="description" value="Description :" />
             <BreezeInput
               id="description"
               type="text"
@@ -66,7 +66,7 @@
             />
           </div>
           <div>
-            <BreezeLabel for="taille" value="Taille" />
+            <BreezeLabel for="taille" value="Taille réelle  :" />
             <BreezeInput
               id="taille"
               type="text"
@@ -80,7 +80,7 @@
             />
           </div>
           <div>
-            <BreezeLabel for="prix" value="Prix" />
+            <BreezeLabel for="prix" value="Prix :" />
             <BreezeInput
               id="prix"
               type="number"
@@ -94,7 +94,7 @@
             />
           </div>
           <div class="mt-2">
-            <BreezeLabel for="image" value="Image" />
+            <BreezeLabel for="image" value="Image :" />
             <BreezeInput
               id="image"
               type="file"
@@ -107,7 +107,7 @@
             />
           </div>
           <div class="flex items-center justify-end mt-4">
-            <BreezeButton class="ml-4">Edit</BreezeButton>
+            <BreezeButton class="ml-4">Modifier</BreezeButton>
           </div>
         </form>
       </div>

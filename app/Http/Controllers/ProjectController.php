@@ -46,7 +46,7 @@ class ProjectController extends Controller
                 'prix' => $request->prix,
             ]);
 
-            return Redirect::route('projects.index')->with('message', 'Œuvre artistique crée avec succès.');
+            return Redirect::route('projects.index')->with('message', 'Œuvre artistique créée avec succès.');
         }
         return Redirect::back();
     }
@@ -82,7 +82,7 @@ class ProjectController extends Controller
             'image' => $image
         ]);
 
-        return Redirect::route('projects.index')->with('message', 'Project updated successfully.');
+        return Redirect::route('projects.index')->with('message', 'Œuvre artistique a été modifiée avec succès.');
     }
 
     public function destroy(Project $project)
