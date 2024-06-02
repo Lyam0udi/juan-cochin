@@ -1,6 +1,7 @@
 <script setup>
 import Project from "./Project.vue";
-import { ref, watch } from "vue";
+import Pagination from "./Pagination.vue";
+import { ref, watch, computed } from "vue";
 
 const props = defineProps({
   skills: Object,
@@ -9,19 +10,31 @@ const props = defineProps({
 
 const filteredProjects = ref(props.projects.data);
 const selectedSkill = ref("all");
+const currentPage = ref(1);
+const projectsPerPage = ref(6); // Adjust this number as needed
 
 const filterProjects = (id) => {
   if (id === "all") {
     filteredProjects.value = props.projects.data;
   } else {
     filteredProjects.value = props.projects.data.filter((project) => {
-      return project.skill.id === id;
+      return project.skill_id === id;
     });
   }
   selectedSkill.value = id;
+  currentPage.value = 1; // Reset to first page when filter is applied
 };
 
-// Watch for changes to the projects prop and update the filtered projects
+const paginatedProjects = computed(() => {
+  const start = (currentPage.value - 1) * projectsPerPage.value;
+  const end = start + projectsPerPage.value;
+  return filteredProjects.value.slice(start, end);
+});
+
+const totalPages = computed(() => {
+  return Math.ceil(filteredProjects.value.length / projectsPerPage.value);
+});
+
 watch(() => props.projects.data, (newProjects) => {
   filterProjects(selectedSkill.value);
 });
@@ -70,11 +83,16 @@ watch(() => props.projects.data, (newProjects) => {
       :class="{ 'opacity-50': selectedSkill !== 'all' && filteredProjects.length === 0 }"
     >
       <Project
-        v-for="project in filteredProjects"
+        v-for="project in paginatedProjects"
         :key="project.id"
         :project="project"
         class="transition-transform transform hover:scale-105"
       />
     </section>
+    <Pagination :current-page="currentPage" :total-pages="totalPages" @page-changed="currentPage = $event" />
   </div>
 </template>
+
+<style scoped>
+/* Add any additional styles here */
+</style>
