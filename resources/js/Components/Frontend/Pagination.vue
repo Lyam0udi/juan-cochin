@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="flex justify-center mt-8">
     <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Previous</button>
     <span class="mx-4">Page {{ currentPage }} of {{ totalPages }}</span>
@@ -28,4 +28,4 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-</style>
+</style> -->
