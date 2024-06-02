@@ -1,6 +1,5 @@
 <script setup>
 import Project from "./Project.vue";
-import Pagination from "./Pagination.vue";
 import { ref, watch, computed } from "vue";
 
 const props = defineProps({
@@ -10,6 +9,7 @@ const props = defineProps({
 
 const filteredProjects = ref(props.projects.data);
 const selectedSkill = ref("all");
+
 const currentPage = ref(1);
 const projectsPerPage = ref(6); // Adjust this number as needed
 
@@ -18,12 +18,17 @@ const filterProjects = (id) => {
     filteredProjects.value = props.projects.data;
   } else {
     filteredProjects.value = props.projects.data.filter((project) => {
-      return project.skill_id === id;
+      return project.skill.id === id;
     });
   }
   selectedSkill.value = id;
   currentPage.value = 1; // Reset to first page when filter is applied
 };
+
+// Watch for changes to the projects prop and update the filtered projects
+watch(() => props.projects.data, (newProjects) => {
+  filterProjects(selectedSkill.value);
+});
 
 const paginatedProjects = computed(() => {
   const start = (currentPage.value - 1) * projectsPerPage.value;
@@ -35,9 +40,11 @@ const totalPages = computed(() => {
   return Math.ceil(filteredProjects.value.length / projectsPerPage.value);
 });
 
-watch(() => props.projects.data, (newProjects) => {
-  filterProjects(selectedSkill.value);
-});
+const changePage = (page) => {
+  if (page >= 1 && page <= totalPages.value) {
+    currentPage.value = page;
+  }
+};
 </script>
 
 <template>
@@ -89,7 +96,23 @@ watch(() => props.projects.data, (newProjects) => {
         class="transition-transform transform hover:scale-105"
       />
     </section>
-    <Pagination :current-page="currentPage" :total-pages="totalPages" @page-changed="currentPage = $event" />
+    <div class="flex justify-center my-4">
+      <button
+        @click="changePage(currentPage - 1)"
+        :disabled="currentPage === 1"
+        class="px-4 py-2 mx-1 bg-light-tail-500 dark:bg-dark-navy-100 text-white rounded-md"
+      >
+        Previous
+      </button>
+      <span class="px-4 py-2 mx-1">{{ currentPage }} / {{ totalPages }}</span>
+      <button
+        @click="changePage(currentPage + 1)"
+        :disabled="currentPage === totalPages"
+        class="px-4 py-2 mx-1 bg-light-tail-500 dark:bg-dark-navy-100 text-white rounded-md"
+      >
+        Next
+      </button>
+    </div>
   </div>
 </template>
 
