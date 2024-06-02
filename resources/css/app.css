@@ -41,4 +41,11 @@
     .active {
         @apply text-accent;
     }
+
+    *, ::before, ::after {
+        --tw-translate-x: initial !important;
+        --tw-translate-y: initial !important;
+        /* Add more overrides here as needed */
+      }
+      
 }
