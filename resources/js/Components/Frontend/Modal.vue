@@ -6,6 +6,7 @@
         </button>
         <img :src="project.image" :alt="project.name" class="w-full h-auto rounded-md" />
         <h3 class="text-lg font-semibold mt-4"><strong>Titre :</strong>{{ project.name }}</h3>
+        <p><strong>Catégorie :</strong>{{ project.skill.name }}</p>
         <p><strong>Description :</strong>{{ project.description }}</p>
         <p><strong>Taille:</strong> {{ project.taille }}</p>
         <p v-if="project.prix"><strong>Prix:</strong> {{ project.prix }}</p>
