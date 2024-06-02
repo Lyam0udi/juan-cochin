@@ -578,12 +578,12 @@ select {
   outline: 1px solid ButtonText;
   outline: 1px auto -webkit-focus-ring-color;
 }
-
+/**, ::before, ::after { Content commented ///// --tw-translate-x: 0;
+  --tw-translate-y: 0;  */
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
+  
   --tw-rotate: 0;
   --tw-skew-x: 0;
   --tw-skew-y: 0;
