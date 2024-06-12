@@ -51,7 +51,7 @@
         </button>
 
        <!-- Page information -->
-        <span class="mx-4">Page {{ currentPage }} of {{ totalPages }}</span>
+        <span class="mx-4">Page {{ currentPage }} / {{ totalPages }}</span>
 
       <!-- Next button -->
         <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages || totalPages === 0" class="arrow-button ml-4" v-if="currentPage !== totalPages && totalPages !== 0">
