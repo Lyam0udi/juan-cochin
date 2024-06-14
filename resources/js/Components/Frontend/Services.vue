@@ -36,11 +36,21 @@
 </script>
 
 <style scoped>
+    .service-card {
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
   /* Add scoped styles for adjustments */
   @media (min-width: 1024px) {
     /* Adjust grid layout for larger screens */
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr)); /* Adjust to 2 columns */
+    }
+    .section {
+      padding: 6rem 0;
     }
   }
 </style>
