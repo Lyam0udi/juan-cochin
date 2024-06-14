@@ -50,7 +50,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr)); /* Adjust to 2 columns */
     }
     .section {
-      padding: 6rem 0;
+      padding: 7rem 0;
     }
   }
 </style>
