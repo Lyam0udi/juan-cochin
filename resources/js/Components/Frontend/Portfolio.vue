@@ -10,7 +10,7 @@ defineProps({
 <template> <!-- pt-10 in the section to Reduce the space between the context and the edge in the top-->
   <section
     id="gallery"
-    class="section bg-light-primary dark:bg-dark-primary min-h-[1000px] pt-20" 
+    class="section bg-light-primary dark:bg-dark-primary min-h-[1000px] pt-14" 
   >
     <div
       class="container mx-auto"
