@@ -68,9 +68,9 @@ const submit = () => {
                 </svg>
               </div>
               <div>
-                <h4 class="font-body text-xl mb-1">Avez-vous des questions?</h4>
+                <h4 class="font-body text-xl mb-1">Avez-vous des questions ?</h4>
                 <p class="mb-1 text-paragraph">Je suis joignable via ma boîte mail :</p>
-                <p class="text-accent font-normal">Juan@gmail.com</p>
+                <p class="text-accent font-normal">lechatrouge28@gmail.com</p>
               </div>
             </div>
             <div class="flex gap-x-4">
@@ -97,7 +97,7 @@ const submit = () => {
               </div>
               <div>
                 <h4 class="font-body text-xl mb-1">Emplacement actuel</h4>
-                <p class="mb-1 text-paragraph">Ville, Pays</p>
+                <p class="mb-1 text-paragraph">île de Houat, Bretagne</p>
                 <p class="text-accent font-normal">Servant des clients à travers le monde</p>
               </div>
             </div>
