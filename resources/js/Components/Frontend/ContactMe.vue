@@ -16,7 +16,7 @@ function setShowMessage(value) {
 function cleanForm() {
   form.reset();
   setShowMessage(true);
-  setTimeout(() => setShowMessage(false), 2000);
+  setTimeout(() => setShowMessage(false), 3000);
 }
 
 const submit = () => {
@@ -111,7 +111,7 @@ const submit = () => {
               v-if="showMessage"
               class="m-2 p-4 bg-light-tail-500 dark:bg-dark-navy-100 text-light-secondary rounded-lg"
             >
-              Merci de me contacter.
+              Merci de me contacter!
             </div>
             <div class="space-y-4">
               <div>
