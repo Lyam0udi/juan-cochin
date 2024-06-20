@@ -5,7 +5,15 @@
         &times;
       </button>
       <div class="p-4">
-        <img :src="project.image" :alt="project.name" class="w-full h-auto rounded-md mb-4" />
+        <div class="relative">
+          <button @click="zoomIn" class="absolute top-0 right-0 mr-4 mt-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10">
+            +
+          </button>
+          <button @click="zoomOut" class="absolute top-0 right-0 mr-4 mt-12 text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10">
+            -
+          </button>
+          <img :src="project.image" :alt="project.name" :style="{ transform: 'scale(' + zoomLevel + ')' }" class="w-full h-auto rounded-md mb-4" />
+        </div>
         <h3 class="text-lg font-semibold"><strong>Titre :</strong> {{ project.name }}</h3>
         <p><strong>Catégorie :</strong> {{ project.skill.name }}</p>
         <p><strong>Description :</strong> {{ project.description }}</p>
@@ -17,7 +25,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits, ref } from 'vue';
 
 const props = defineProps({
   project: Object,
@@ -26,8 +34,18 @@ const props = defineProps({
 
 const emit = defineEmits(['close']);
 
+const zoomLevel = ref(1);
+
 const closeModal = () => {
   emit('close');
+};
+
+const zoomIn = () => {
+  zoomLevel.value += 0.1;
+};
+
+const zoomOut = () => {
+  zoomLevel.value -= 0.1;
 };
 </script>
 
@@ -47,6 +65,7 @@ const closeModal = () => {
 .modal-content img {
   max-height: 50vh;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .shadow-lg {
