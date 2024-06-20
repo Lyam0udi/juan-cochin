@@ -17,7 +17,7 @@
         <h3 class="text-lg font-semibold"><strong>Titre :</strong> {{ project.name }}</h3>
         <p><strong>Catégorie :</strong> {{ project.skill.name }}</p>
         <p><strong>Description :</strong> {{ project.description }}</p>
-        <p><strong>Taille :</strong> {{ project.taille }}</p>
+        <p><strong>Taille :</strong> {{ project.taille }} <strong>cm x cm</strong></p>
         <p v-if="project.prix"><strong>Prix :</strong> {{ project.prix }} <strong>€</strong></p>
       </div>
     </div>

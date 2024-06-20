@@ -46,7 +46,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.description" />
           </div>
           <div>
-            <BreezeLabel for="taille" value="Taille réelle :" />
+            <BreezeLabel for="taille" value="Taille réelle en centimètres :" />
             <BreezeInput
               id="taille"
               type="text"
