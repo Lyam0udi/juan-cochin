@@ -40,7 +40,7 @@
                 <th scope="col" class="py-3 px-6">Titre</th>
                 <th scope="col" class="py-3 px-6">Catégorie</th>
                 <th scope="col" class="py-3 px-6">Image</th>
-                <th scope="col" class="py-3 px-6"></th>
+                <th scope="col" class="py-3 px-6">Options</th>
               </tr>
             </thead>
             <tbody>

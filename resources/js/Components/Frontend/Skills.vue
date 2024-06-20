@@ -36,7 +36,7 @@ export default {
       if (numSkills === 1) {
         classes = 'flex justify-center';
       } else if (numSkills === 2) {
-        classes = 'flex justify-between items-center';
+        classes = 'flex justify-around items-center';  // Changed from justify-between to justify-around
       }
 
       return classes;
