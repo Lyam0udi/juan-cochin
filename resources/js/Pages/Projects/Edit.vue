@@ -80,7 +80,7 @@
             />
           </div>
           <div>
-            <BreezeLabel for="prix" value="Prix :" />
+            <BreezeLabel for="prix" value="Prix en € :" />
             <BreezeInput
               id="prix"
               type="number"

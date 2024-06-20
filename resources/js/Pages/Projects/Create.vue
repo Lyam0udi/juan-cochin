@@ -57,7 +57,7 @@
             <BreezeInputError class="mt-2" :message="form.errors.taille" />
           </div>
           <div>
-            <BreezeLabel for="prix" value="Prix :" />
+            <BreezeLabel for="prix" value="Prix en € :" />
             <BreezeInput
               id="prix"
               type="number"

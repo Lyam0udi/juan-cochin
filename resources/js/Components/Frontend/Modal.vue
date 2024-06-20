@@ -9,8 +9,8 @@
         <h3 class="text-lg font-semibold"><strong>Titre :</strong> {{ project.name }}</h3>
         <p><strong>Catégorie :</strong> {{ project.skill.name }}</p>
         <p><strong>Description :</strong> {{ project.description }}</p>
-        <p><strong>Taille:</strong> {{ project.taille }}</p>
-        <p v-if="project.prix"><strong>Prix:</strong> {{ project.prix }}</p>
+        <p><strong>Taille :</strong> {{ project.taille }}</p>
+        <p v-if="project.prix"><strong>Prix :</strong> {{ project.prix }}</p>
       </div>
     </div>
   </div>
