@@ -128,7 +128,7 @@ const updateZoomOrigin = (event) => {
 };
 
 const trapFocus = (event) => {
-  if (isOpen && modalContent.value) {
+  if (props.isOpen && modalContent.value) {
     const focusableElements = modalContent.value.querySelectorAll(
       'a, button, textarea, input, select'
     );
