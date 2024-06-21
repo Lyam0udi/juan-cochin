@@ -89,7 +89,7 @@
                   mr-3
                   sm:mr-4
                 "
-                href="https://facebook.com/URLJuan"
+                href="https://www.facebook.com/profile.php?id=61561260029898"
               >
                 <svg
                   width="8"
