@@ -7,7 +7,7 @@
     tabindex="0"
   >
     <div
-      class="modal-content bg-white dark:bg-dark-primary max-w-3xl w-full p-6 relative rounded-lg shadow-lg"
+      class="modal-content bg-white dark:bg-dark-primary max-w-5xl w-full p-8 relative rounded-lg shadow-lg"
       @click.stop
       ref="modalContent"
     >
@@ -19,43 +19,71 @@
         &times;
       </button>
       <div class="p-4">
-        <div class="relative">
-          <button
-            @click="zoomIn"
-            class="absolute top-0 right-0 mr-4 mt-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10"
-            aria-label="Zoom in"
-          >
-            +
-          </button>
-          <button
-            @click="zoomOut"
-            class="absolute top-0 right-0 mr-4 mt-12 text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10"
-            aria-label="Zoom out"
-          >
-            -
-          </button>
+        <div class="relative mb-6 overflow-hidden">
           <img
             :src="project.image"
             :alt="project.name"
-            :style="{ transform: 'scale(' + zoomLevel + ')' }"
-            class="w-full h-auto rounded-md mb-4"
+            :style="{ transform: 'scale(' + zoomLevel + ')', transformOrigin: zoomOrigin }"
+            class="w-[60%] h-auto rounded-md mx-auto"
+            @mousemove="updateZoomOrigin"
           />
+          <div class="zoom-controls flex items-center justify-center mt-4">
+            <button
+              @click="zoomOut"
+              class="text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10"
+              aria-label="Zoom out"
+            >
+              -
+            </button>
+            <input
+              type="range"
+              min="1"
+              max="3"
+              step="0.1"
+              v-model="zoomLevel"
+              class="mx-4"
+              aria-label="Zoom level"
+            />
+            <button
+              @click="zoomIn"
+              class="text-gray-600 hover:text-gray-900 dark:text-gray-300 text-xl z-10"
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+          </div>
         </div>
-        <h3 class="text-lg font-semibold">
+        <h3 class="text-2xl font-semibold mb-2">
           <strong>Titre :</strong> {{ project.name }}
         </h3>
-        <p>
+        <p class="text-lg mb-2">
           <strong>Catégorie :</strong> {{ project.skill.name }}
         </p>
-        <p>
+        <p class="text-lg mb-2">
           <strong>Description :</strong> {{ project.description }}
         </p>
-        <p>
+        <p class="text-lg mb-2">
           <strong>Taille :</strong> {{ project.taille }} <strong>cm</strong>
         </p>
-        <p v-if="project.prix">
+        <p v-if="project.prix" class="text-lg mb-2">
           <strong>Prix :</strong> {{ project.prix }} <strong>€</strong>
         </p>
+        <div class="flex space-x-4 mt-4">
+          <button
+            @click="resetZoom"
+            class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-800"
+            aria-label="Reset zoom"
+          >
+            Réinitialiser
+          </button>
+          <button
+            @click="closeModal"
+            class="px-4 py-2 bg-accent text-white rounded hover:bg-secondary dark:bg-accent dark:hover:bg-secondary"
+            aria-label="Close modal"
+          >
+            Fermer
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -72,6 +100,7 @@ const props = defineProps({
 const emit = defineEmits(['close']);
 
 const zoomLevel = ref(1);
+const zoomOrigin = ref('center center');
 const modalContent = ref(null);
 
 const closeModal = () => {
@@ -84,6 +113,18 @@ const zoomIn = () => {
 
 const zoomOut = () => {
   zoomLevel.value = Math.max(zoomLevel.value - 0.1, 1); // Min zoom level
+};
+
+const resetZoom = () => {
+  zoomLevel.value = 1;
+  zoomOrigin.value = 'center center';
+};
+
+const updateZoomOrigin = (event) => {
+  const rect = event.target.getBoundingClientRect();
+  const x = ((event.clientX - rect.left) / rect.width) * 100;
+  const y = ((event.clientY - rect.top) / rect.height) * 100;
+  zoomOrigin.value = `${x}% ${y}%`;
 };
 
 const trapFocus = (event) => {
@@ -106,6 +147,11 @@ const trapFocus = (event) => {
 
 onMounted(() => {
   document.addEventListener('keydown', trapFocus);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 });
 
 onBeforeUnmount(() => {
@@ -128,9 +174,7 @@ onBeforeUnmount(() => {
 }
 
 .modal-content img {
-  max-height: 50vh;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, transform-origin 0.3s ease;
 }
 
 .shadow-lg {
@@ -139,5 +183,24 @@ onBeforeUnmount(() => {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.zoom-controls input {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 4;
+  }
+
+  .zoom-controls input {
+    width: 100px;
+  }
+
+  h3, p {
+    font-size: 1rem;
+  }
 }
 </style>
