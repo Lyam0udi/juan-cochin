@@ -34,6 +34,14 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        // Count the number of registered users
+        $userCount = User::count();
+
+        // Allow registration only if there are less than 2 users
+        if ($userCount >= 2) {
+            return redirect()->route('login')->withErrors(['registration' => 'Registration limit reached.']);
+        }
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
