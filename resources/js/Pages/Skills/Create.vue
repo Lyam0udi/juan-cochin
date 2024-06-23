@@ -1,5 +1,5 @@
 <template>
-  <Head title="New Skill" />
+  <Head title="New Category" />
   <BreezeAuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight" style="color: #4b5563;">
