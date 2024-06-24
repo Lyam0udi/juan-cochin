@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
+use Spatie\Permission\Models\Role;
 
 class RegisteredUserController extends Controller
 {
@@ -21,6 +22,11 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
+        // Check if there are already two admin users
+        if (User::role('admin')->count() >= 2) {
+            return redirect('/');
+        }
+
         return Inertia::render('Auth/Register');
     }
 
@@ -34,6 +40,11 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        // Check if there are already two admin users
+        if (User::role('admin')->count() >= 2) {
+            abort(403, 'Registration is closed');
+        }
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -45,6 +56,9 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        // Assign the admin role to the user
+        $user->assignRole('admin');
 
         event(new Registered($user));
 

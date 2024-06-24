@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +33,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('/projects', ProjectController::class);
 });
 
-require __DIR__ . '/auth.php';
+// Registration routes with custom logic to restrict access after two admins
+Route::middleware('guest')->group(function () {
+    Route::get('/register', function () {
+        if (User::role('admin')->count() >= 2) {
+            return redirect('/')->with('error', 'Registration is closed');
+        }
+        return Inertia::render('Auth/Register');
+    })->name('register');
+
+    Route::post('/register', [RegisteredUserController::class, 'store']);
+});
+
+require __DIR__.'/auth.php';
