@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('image');
             $table->text('description')->nullable();
             $table->string('taille')->nullable();
-            $table->decimal('prix', 8, 2)->nullable();
+            $table->decimal('prix', 12, 1)->nullable();
             $table->timestamps();
         });
     }
